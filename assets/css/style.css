@@ -1,0 +1,21 @@
+/****** General ***********/
+* {
+  font-family: "Raleway", sans-serif;
+}
+body {
+  display: flex;
+  justify-content: center;
+  /*margin: 0;
+  padding: 0;
+  margin: auto;
+  max-width: 1440px;
+  height: 1722px;
+  gap: 35px;*/
+}
+
+.main-container {
+  width: 100%;
+  /*max-width: 1440px;
+  padding: 0 50px;*/
+  box-sizing: border-box;
+}
