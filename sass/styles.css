@@ -13,7 +13,8 @@ body {
   box-sizing: border-box;
   background-color: #9356dc;
 }
-.main__container header {
+
+header {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -21,25 +22,27 @@ body {
   height: 113px;
   background-color: #ffffff;
 }
-.main__container .header--logo {
+
+.header--logo {
   height: 63px;
 }
-.main__container .header--logo img {
+.header--logo img {
   position: relative;
   width: 197px;
   height: 36px;
   top: 14px;
 }
-.main__container .location {
+
+.location {
   width: 100%;
   background-color: #eaeaea;
 }
-.main__container .location ul {
+.location ul {
   text-align: center;
   padding: 0;
   list-style: none;
 }
-.main__container .location ul i {
+.location ul i {
   margin: auto;
   padding-right: 10px;
 }/*# sourceMappingURL=styles.css.map */

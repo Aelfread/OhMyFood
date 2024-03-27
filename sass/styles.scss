@@ -22,37 +22,37 @@ body {
   /*padding: 0 50px;*/
   box-sizing: border-box;
   background-color: $color-primary;
+}
 
-  header {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 113px;
-    background-color: $color-grey-2;
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 113px;
+  background-color: $color-grey-2;
+}
+
+.header--logo {
+  height: 63px;
+  img {
+    position: relative;
+    width: 197px;
+    height: 36px;
+    top: 14px;
   }
+}
 
-  .header--logo {
-    height: 63px;
-    img {
-      position: relative;
-      width: 197px;
-      height: 36px;
-      top: 14px;
-    }
-  }
-
-  .location {
-    width: 100%;
-    background-color: $color-grey;
-    ul {
-      text-align: center;
-      padding: 0;
-      list-style: none;
-      i {
-        margin: auto;
-        padding-right: 10px;
-      }
+.location {
+  width: 100%;
+  background-color: $color-grey;
+  ul {
+    text-align: center;
+    padding: 0;
+    list-style: none;
+    i {
+      margin: auto;
+      padding-right: 10px;
     }
   }
 }
