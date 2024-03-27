@@ -9,7 +9,7 @@ body {
 .main__container {
   width: 100%;
   max-width: 375px;
-  padding: 0 50px;
+  /*padding: 0 50px;*/
   box-sizing: border-box;
   background-color: #9356dc;
 }/*# sourceMappingURL=styles.css.map */
