@@ -12,4 +12,34 @@ body {
   /*padding: 0 50px;*/
   box-sizing: border-box;
   background-color: #9356dc;
+}
+.main__container header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 113px;
+  background-color: #ffffff;
+}
+.main__container .header--logo {
+  height: 63px;
+}
+.main__container .header--logo img {
+  position: relative;
+  width: 197px;
+  height: 36px;
+  top: 14px;
+}
+.main__container .location {
+  width: 100%;
+  background-color: #eaeaea;
+}
+.main__container .location ul {
+  text-align: center;
+  padding: 0;
+  list-style: none;
+}
+.main__container .location ul i {
+  margin: auto;
+  padding-right: 10px;
 }/*# sourceMappingURL=styles.css.map */
