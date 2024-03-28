@@ -125,3 +125,16 @@ header {
     }
   }
 }
+
+.restaurants__choice img {
+  width: 346px;
+  height: 231px;
+  object-fit: cover;
+}
+
+.new__restaurants {
+  position: relative;
+  top: 35px;
+  left: 265px;
+  background-color: $color-tertiary;
+}

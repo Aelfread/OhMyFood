@@ -1,0 +1,9 @@
+.menu__img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 275px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}/*# sourceMappingURL=menu.css.map */

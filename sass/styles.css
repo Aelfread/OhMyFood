@@ -110,4 +110,18 @@ header {
   padding: 2px 6.5px;
   background-color: #9356dc;
   color: #eaeaea;
+}
+
+.restaurants__choice img {
+  width: 346px;
+  height: 231px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.new__restaurants {
+  position: relative;
+  top: 35px;
+  left: 265px;
+  background-color: #99e2d0;
 }/*# sourceMappingURL=styles.css.map */
