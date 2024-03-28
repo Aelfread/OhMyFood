@@ -7,6 +7,7 @@ $color-header-location: black;
 $color-black: #000;
 $color-grey: #eaeaea;
 $color-grey-2: #ffffff;
+$color-grey-darken: lighten($color-grey, 5%);
 
 body {
   display: flex;
@@ -21,7 +22,7 @@ body {
   max-width: 375px;
   /*padding: 0 50px;*/
   box-sizing: border-box;
-  background-color: $color-primary;
+  /*background-color: $color-primary;*/
 }
 
 header {
@@ -54,5 +55,29 @@ header {
       margin: auto;
       padding-right: 10px;
     }
+  }
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  text-align: center;
+  background-color: $color-grey-darken;
+  opacity: 0.8;
+  p {
+    max-width: 315px;
+  }
+  h1 {
+    max-width: 275px;
+  }
+
+  .hero__button {
+    width: 218px;
+    height: 50px;
+    border-radius: 25px;
+    background: linear-gradient(360deg, #9356dc, #ff79da);
+    color: #ffffff;
   }
 }

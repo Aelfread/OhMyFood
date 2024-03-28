@@ -11,7 +11,7 @@ body {
   max-width: 375px;
   /*padding: 0 50px;*/
   box-sizing: border-box;
-  background-color: #9356dc;
+  /*background-color: $color-primary;*/
 }
 
 header {
@@ -45,4 +45,27 @@ header {
 .location ul i {
   margin: auto;
   padding-right: 10px;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  text-align: center;
+  background-color: #f7f7f7;
+  opacity: 0.8;
+}
+.hero p {
+  max-width: 315px;
+}
+.hero h1 {
+  max-width: 275px;
+}
+.hero .hero__button {
+  width: 218px;
+  height: 50px;
+  border-radius: 25px;
+  background: linear-gradient(360deg, #9356dc, #ff79da);
+  color: #ffffff;
 }/*# sourceMappingURL=styles.css.map */
