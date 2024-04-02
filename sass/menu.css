@@ -4,6 +4,7 @@ body {
   margin: 0;
   padding: 0;
   margin: auto;
+  font-family: "Roboto", sans-serif;
 }
 
 .main__container {
@@ -60,12 +61,14 @@ header {
   text-align: center;
   background-color: #f7f7f7;
   opacity: 0.8;
+  padding-bottom: 50px;
   /*.hero__button:hover {
     background: linear-gradient(360deg, #ff79da, #9356dc);
   }*/
 }
 .hero p {
   max-width: 315px;
+  font-size: 18px;
 }
 .hero h1 {
   max-width: 275px;
@@ -76,6 +79,16 @@ header {
   border-radius: 25px;
   background: linear-gradient(360deg, #9356dc, #ff79da);
   color: #ffffff;
+  margin-top: 15px;
+  border: none;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.fonctionnement {
+  padding: 55px 0;
+}
+.fonctionnement h2 {
+  margin: 0;
 }
 
 .fonctionnement__bar {
@@ -91,6 +104,7 @@ header {
   padding: 0;
   list-style: none;
   width: 89.5%;
+  margin: 0;
 }
 .fonctionnement__bar ol li {
   display: flex;
@@ -102,6 +116,7 @@ header {
   height: 72.38px;
   background-color: #f7f7f7;
   margin-top: 20px;
+  box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.1);
 }
 .fonctionnement__bar ol i {
   position: relative;
@@ -111,7 +126,7 @@ header {
   position: relative;
   border-radius: 24px;
   font-size: 14px;
-  right: 84px;
+  right: 78px;
   padding: 2px 6.5px;
   background-color: #9356dc;
   color: #eaeaea;
@@ -124,6 +139,7 @@ header {
   align-items: center;
   background-color: #eaeaea;
   /*height: 1058px;*/
+  padding-bottom: 40px;
 }
 .restaurants .restaurants__title {
   width: 100%;
@@ -175,6 +191,10 @@ header {
   background-color: #99e2d0;
   padding: 6px 11px;
   border-radius: 2px;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  color: #008766;
 }
 
 footer {
@@ -185,7 +205,10 @@ footer {
   background-color: black;
 }
 footer h2 {
-  color: #eaeaea;
+  font-family: "Shrikhand", sans-serif;
+  font-style: italic;
+  font-size: 18px;
+  color: white;
 }
 footer ul {
   margin: 0 0 10px 0;
@@ -222,6 +245,10 @@ header .header--logo {
   right: 75px;
 }
 
+main {
+  background-color: #eaeaea;
+}
+
 .menu__content {
   background-color: #eaeaea;
   border-radius: 20px 20px 0 0;
@@ -234,6 +261,10 @@ header .header--logo {
   justify-content: space-between;
   align-items: center;
 }
+.menu__content__title h1 {
+  font-family: "shrikhand", sans-serif;
+  font-weight: 400;
+}
 
 .entries ul,
 .plats ul,
@@ -245,8 +276,9 @@ header .header--logo {
 .plats ul li,
 .desserts ul li {
   background-color: #ffffff;
-  border-radius: 20px;
+  border-radius: 15px;
   color: black;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
 }
 .entries ul li button,
 .plats ul li button,
@@ -256,12 +288,19 @@ header .header--logo {
   border-radius: 0 20px 20px 0;
   background-color: #99e2d0;
   border: none;
+  /*position: absolute;*/
 }
 .entries__title span,
 .plats__title span,
 .desserts__title span {
-  padding-bottom: 3px;
+  padding-bottom: 5px;
   border-bottom: 3px solid #99e2d0;
+}
+.entries__title,
+.plats__title,
+.desserts__title {
+  font-weight: 300;
+  font-size: 16px;
 }
 .entries__list__card,
 .plats__list__card,
@@ -271,11 +310,7 @@ header .header--logo {
   align-items: center;
   margin-top: 12px;
   /*background-color: $color-primary;*/
-  /*&__price {
-    display: flex;
-    align-self: flex-end;
-    font-weight: bold;
-  }*/
+  padding: 13px 9px;
 }
 .entries__list__card h3,
 .entries__list__card p,
@@ -283,7 +318,7 @@ header .header--logo {
 .plats__list__card p,
 .desserts__list__card h3,
 .desserts__list__card p {
-  padding: 0 10px;
+  /*padding: 0 10px;*/
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -297,17 +332,29 @@ header .header--logo {
 .desserts__list__card p {
   font-size: 15px;
 }
+.entries__list__card__price,
+.plats__list__card__price,
+.desserts__list__card__price {
+  position: relative;
+  top: 13px;
+  font-weight: bold;
+  /*padding-right: 10px;*/
+}
 .entries__list__card__txt,
 .plats__list__card__txt,
 .desserts__list__card__txt {
   display: grid;
   gap: 5px;
+  /*width: 287px;*/
+  /*padding-left: 10px;*/
 }
 
 .entries__btn {
   display: flex;
   justify-content: center;
-  margin-bottom: 40px;
+  /*margin-bottom: 40px;*/
+  position: relative;
+  bottom: 45px;
 }
 .entries__btn__btn {
   width: 186px;
@@ -315,6 +362,8 @@ header .header--logo {
   border-radius: 25px;
   background: linear-gradient(360deg, #9356dc, #ff79da);
   color: #ffffff;
+  border: none;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
 }
 
 .menu__img {

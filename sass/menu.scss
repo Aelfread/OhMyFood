@@ -17,6 +17,10 @@ header {
     right: 75px;
   }
 }
+
+main {
+  background-color: #eaeaea;
+}
 .menu__content {
   background-color: $color-grey;
 
@@ -28,6 +32,10 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    h1 {
+      font-family: "shrikhand", sans-serif;
+      font-weight: 400;
+    }
   }
 }
 
@@ -39,20 +47,27 @@ header {
     padding: 0;
     li {
       background-color: $color-grey-2;
-      border-radius: 20px;
+      border-radius: 15px;
       color: black;
+      @include box-shadow(0 2px 2px 0 rgba(0, 0, 0, 0.1));
       button {
         width: 59px;
         height: 69px;
         border-radius: 0 20px 20px 0;
         background-color: $color-tertiary;
         border: none;
+        /*position: absolute;*/
       }
     }
   }
   &__title span {
-    padding-bottom: 3px;
+    padding-bottom: 5px;
     border-bottom: 3px solid $color-tertiary;
+  }
+
+  &__title {
+    font-weight: 300;
+    font-size: 16px;
   }
 
   &__list__card {
@@ -61,9 +76,10 @@ header {
     align-items: center;
     margin-top: 12px;
     /*background-color: $color-primary;*/
+    padding: 13px 9px;
     h3,
     p {
-      padding: 0 10px;
+      /*padding: 0 10px;*/
       margin-top: 0;
       margin-bottom: 0;
     }
@@ -73,14 +89,17 @@ header {
     p {
       font-size: 15px;
     }
-    /*&__price {
-      display: flex;
-      align-self: flex-end;
+    &__price {
+      position: relative;
+      top: 13px;
       font-weight: bold;
-    }*/
+      /*padding-right: 10px;*/
+    }
     &__txt {
       display: grid;
       gap: 5px;
+      /*width: 287px;*/
+      /*padding-left: 10px;*/
     }
   }
 }
@@ -88,13 +107,17 @@ header {
 .entries__btn {
   display: flex;
   justify-content: center;
-  margin-bottom: 40px;
+  /*margin-bottom: 40px;*/
+  position: relative;
+  bottom: 45px;
   &__btn {
     width: 186px;
     height: 50px;
     border-radius: 25px;
     background: linear-gradient(360deg, #9356dc, #ff79da);
     color: #ffffff;
+    border: none;
+    @include box-shadow(0 4px 4px 0 rgba(0, 0, 0, 0.2));
   }
 }
 

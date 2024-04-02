@@ -4,6 +4,7 @@ body {
   margin: 0;
   padding: 0;
   margin: auto;
+  font-family: "Roboto", sans-serif;
 }
 
 .main__container {
@@ -60,12 +61,14 @@ header {
   text-align: center;
   background-color: #f7f7f7;
   opacity: 0.8;
+  padding-bottom: 50px;
   /*.hero__button:hover {
     background: linear-gradient(360deg, #ff79da, #9356dc);
   }*/
 }
 .hero p {
   max-width: 315px;
+  font-size: 18px;
 }
 .hero h1 {
   max-width: 275px;
@@ -76,6 +79,16 @@ header {
   border-radius: 25px;
   background: linear-gradient(360deg, #9356dc, #ff79da);
   color: #ffffff;
+  margin-top: 15px;
+  border: none;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.fonctionnement {
+  padding: 55px 0;
+}
+.fonctionnement h2 {
+  margin: 0;
 }
 
 .fonctionnement__bar {
@@ -91,6 +104,7 @@ header {
   padding: 0;
   list-style: none;
   width: 89.5%;
+  margin: 0;
 }
 .fonctionnement__bar ol li {
   display: flex;
@@ -102,6 +116,7 @@ header {
   height: 72.38px;
   background-color: #f7f7f7;
   margin-top: 20px;
+  box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.1);
 }
 .fonctionnement__bar ol i {
   position: relative;
@@ -111,7 +126,7 @@ header {
   position: relative;
   border-radius: 24px;
   font-size: 14px;
-  right: 84px;
+  right: 78px;
   padding: 2px 6.5px;
   background-color: #9356dc;
   color: #eaeaea;
@@ -124,6 +139,7 @@ header {
   align-items: center;
   background-color: #eaeaea;
   /*height: 1058px;*/
+  padding-bottom: 40px;
 }
 .restaurants .restaurants__title {
   width: 100%;
@@ -175,6 +191,10 @@ header {
   background-color: #99e2d0;
   padding: 6px 11px;
   border-radius: 2px;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  color: #008766;
 }
 
 footer {
@@ -185,7 +205,10 @@ footer {
   background-color: black;
 }
 footer h2 {
-  color: #eaeaea;
+  font-family: "Shrikhand", sans-serif;
+  font-style: italic;
+  font-size: 18px;
+  color: white;
 }
 footer ul {
   margin: 0 0 10px 0;
