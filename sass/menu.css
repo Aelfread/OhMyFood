@@ -285,10 +285,17 @@ main {
 .desserts ul li button {
   width: 59px;
   height: 69px;
-  border-radius: 0 20px 20px 0;
+  border-radius: 0 15px 15px 0;
   background-color: #99e2d0;
   border: none;
+  display: none;
   /*position: absolute;*/
+  transition: all 450ms;
+}
+.entries ul li button:hover,
+.plats ul li button:hover,
+.desserts ul li button:hover {
+  transform: scale(1.13);
 }
 .entries__title span,
 .plats__title span,
@@ -310,7 +317,12 @@ main {
   align-items: center;
   margin-top: 12px;
   /*background-color: $color-primary;*/
+  /*padding-left: 9px;*/
   padding: 13px 9px;
+  /*&:hover {
+    padding: 0;
+    padding-left: 9px;
+  }*/
 }
 .entries__list__card h3,
 .entries__list__card p,
@@ -345,7 +357,7 @@ main {
 .desserts__list__card__txt {
   display: grid;
   gap: 5px;
-  /*width: 287px;*/
+  width: 287px;
   /*padding-left: 10px;*/
 }
 
