@@ -50,19 +50,6 @@ main {
       border-radius: 15px;
       color: black;
       @include box-shadow(0 2px 2px 0 rgba(0, 0, 0, 0.1));
-      button {
-        width: 59px;
-        height: 69px;
-        border-radius: 0 15px 15px 0;
-        background-color: $color-tertiary;
-        border: none;
-        display: none;
-        /*position: absolute;*/
-        transition: all 450ms;
-        &:hover {
-          transform: scale(1.13);
-        }
-      }
     }
   }
   &__title span {
@@ -81,13 +68,94 @@ main {
     align-items: center;
     margin-top: 12px;
     /*background-color: $color-primary;*/
-    /*padding-left: 9px;*/
-    padding: 13px 9px;
+    padding-left: 9px;
+    /*padding: 13px 9px;*/
+    height: 69px;
+    /*transform-origin: left 20%;
+    transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);*/
 
-    /*&:hover {
+    /*&:active,
+    &:focus {
       padding: 0;
       padding-left: 9px;
+      border: 3px solid #9356dc;
+      transition: transform 330ms ease-in-out;
+      .btn-1 {
+        display: block;
+        transition: transform 330ms ease-in-out;
+        &:hover {
+          transform: scale(2);
+        }
+      }
     }*/
+
+    .hidden-checkbox {
+      display: none;
+    }
+
+    .checkbox-label {
+      position: absolute;
+      left: 306px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 20px; /* Adjust the size of the icon as needed */
+      cursor: pointer;
+      transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1); /* Add transition for opacity and transform */
+      background-color: $color-tertiary;
+      width: 59px;
+      height: 69px;
+      border-radius: 0 15px 15px 0;
+      transform-origin: right;
+      transform: scaleX(0);
+      i {
+        /*color: green;*/ /* Change the color of the icon */
+      }
+    }
+
+    .hidden-checkbox:checked + .checkbox-label i {
+      /*content: "\f058"; */ /* Unicode for the fa-circle-check icon */
+    }
+
+    /*.hidden-checkbox:checked + .checkbox-label &__price {
+      transform: translateX(
+        59px
+      ); 
+    }*/
+
+    &:hover .checkbox-label,
+    &:focus .checkbox-label {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transform: scaleX(1);
+      transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+      opacity: 1;
+      /* Scale up the icon when card is active or focused */
+    }
+
+    &:hover,
+    &:focus {
+      padding: 0;
+      padding-left: 9px;
+      .entries__list__card__price,
+      .plats__list__card__price,
+      .desserts__list__card__price {
+        transform: translateX(-60px);
+      }
+    }
+
+    /*****IMPORTANT ! *****/
+    .btn-1 {
+      width: 59px;
+      height: 69px;
+      border-radius: 0 15px 15px 0;
+      background-color: $color-tertiary;
+      border: none;
+      display: none;
+      /*position: absolute;*/
+    }
+    /***** permet de garder les mêmes dimensions lorsque le bouton est affiché*****/
 
     h3,
     p {
@@ -105,13 +173,42 @@ main {
       position: relative;
       top: 13px;
       font-weight: bold;
-      /*padding-right: 10px;*/
+      /*left: 45px;*/
+      padding-right: 10px;
+      transform: translateX(-10px);
+      transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
     }
+
     &__txt {
       display: grid;
       gap: 5px;
-      width: 287px;
+      /*width: 287px;*/
+      .entries__list__card__title,
+      .plats__list__card__title,
+      .desserts__list__card__title,
+      .entries__list__card__subtitle,
+      .plats__list__card__subtitle,
+      .desserts__list__card__subtitle {
+        width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .unset_overflow {
+        overflow: unset;
+        text-overflow: unset;
+      }
       /*padding-left: 10px;*/
+    }
+    &:hover {
+      .entries__list__card__title,
+      .plats__list__card__title,
+      .desserts__list__card__title,
+      .entries__list__card__subtitle,
+      .plats__list__card__subtitle,
+      .desserts__list__card__subtitle {
+        width: 200px;
+      }
     }
   }
 }

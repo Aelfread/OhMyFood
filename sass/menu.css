@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   display: flex;
   justify-content: center;
@@ -280,23 +281,6 @@ main {
   color: black;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
 }
-.entries ul li button,
-.plats ul li button,
-.desserts ul li button {
-  width: 59px;
-  height: 69px;
-  border-radius: 0 15px 15px 0;
-  background-color: #99e2d0;
-  border: none;
-  display: none;
-  /*position: absolute;*/
-  transition: all 450ms;
-}
-.entries ul li button:hover,
-.plats ul li button:hover,
-.desserts ul li button:hover {
-  transform: scale(1.13);
-}
 .entries__title span,
 .plats__title span,
 .desserts__title span {
@@ -317,12 +301,116 @@ main {
   align-items: center;
   margin-top: 12px;
   /*background-color: $color-primary;*/
-  /*padding-left: 9px;*/
-  padding: 13px 9px;
-  /*&:hover {
+  padding-left: 9px;
+  /*padding: 13px 9px;*/
+  height: 69px;
+  /*transform-origin: left 20%;
+  transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);*/
+  /*&:active,
+  &:focus {
     padding: 0;
     padding-left: 9px;
+    border: 3px solid #9356dc;
+    transition: transform 330ms ease-in-out;
+    .btn-1 {
+      display: block;
+      transition: transform 330ms ease-in-out;
+      &:hover {
+        transform: scale(2);
+      }
+    }
   }*/
+  /*.hidden-checkbox:checked + .checkbox-label &__price {
+    transform: translateX(
+      59px
+    ); 
+  }*/
+  /*****IMPORTANT ! *****/
+  /***** permet de garder les mêmes dimensions lorsque le bouton est affiché*****/
+}
+.entries__list__card .hidden-checkbox,
+.plats__list__card .hidden-checkbox,
+.desserts__list__card .hidden-checkbox {
+  display: none;
+}
+.entries__list__card .checkbox-label,
+.plats__list__card .checkbox-label,
+.desserts__list__card .checkbox-label {
+  position: absolute;
+  left: 306px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px; /* Adjust the size of the icon as needed */
+  cursor: pointer;
+  transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1); /* Add transition for opacity and transform */
+  background-color: #99e2d0;
+  width: 59px;
+  height: 69px;
+  border-radius: 0 15px 15px 0;
+  transform-origin: right;
+  transform: scaleX(0);
+}
+.entries__list__card .checkbox-label i,
+.plats__list__card .checkbox-label i,
+.desserts__list__card .checkbox-label i {
+  /*color: green;*/ /* Change the color of the icon */
+}
+.entries__list__card .hidden-checkbox:checked + .checkbox-label i,
+.plats__list__card .hidden-checkbox:checked + .checkbox-label i,
+.desserts__list__card .hidden-checkbox:checked + .checkbox-label i {
+  /*content: "\f058"; */ /* Unicode for the fa-circle-check icon */
+}
+.entries__list__card:hover .checkbox-label, .entries__list__card:focus .checkbox-label,
+.plats__list__card:hover .checkbox-label,
+.plats__list__card:focus .checkbox-label,
+.desserts__list__card:hover .checkbox-label,
+.desserts__list__card:focus .checkbox-label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scaleX(1);
+  transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  opacity: 1;
+  /* Scale up the icon when card is active or focused */
+}
+.entries__list__card:hover, .entries__list__card:focus,
+.plats__list__card:hover,
+.plats__list__card:focus,
+.desserts__list__card:hover,
+.desserts__list__card:focus {
+  padding: 0;
+  padding-left: 9px;
+}
+.entries__list__card:hover .entries__list__card__price,
+.entries__list__card:hover .plats__list__card__price,
+.entries__list__card:hover .desserts__list__card__price, .entries__list__card:focus .entries__list__card__price,
+.entries__list__card:focus .plats__list__card__price,
+.entries__list__card:focus .desserts__list__card__price,
+.plats__list__card:hover .entries__list__card__price,
+.plats__list__card:hover .plats__list__card__price,
+.plats__list__card:hover .desserts__list__card__price,
+.plats__list__card:focus .entries__list__card__price,
+.plats__list__card:focus .plats__list__card__price,
+.plats__list__card:focus .desserts__list__card__price,
+.desserts__list__card:hover .entries__list__card__price,
+.desserts__list__card:hover .plats__list__card__price,
+.desserts__list__card:hover .desserts__list__card__price,
+.desserts__list__card:focus .entries__list__card__price,
+.desserts__list__card:focus .plats__list__card__price,
+.desserts__list__card:focus .desserts__list__card__price {
+  transform: translateX(-60px);
+}
+.entries__list__card .btn-1,
+.plats__list__card .btn-1,
+.desserts__list__card .btn-1 {
+  width: 59px;
+  height: 69px;
+  border-radius: 0 15px 15px 0;
+  background-color: #99e2d0;
+  border: none;
+  display: none;
+  /*position: absolute;*/
 }
 .entries__list__card h3,
 .entries__list__card p,
@@ -350,15 +438,67 @@ main {
   position: relative;
   top: 13px;
   font-weight: bold;
-  /*padding-right: 10px;*/
+  /*left: 45px;*/
+  padding-right: 10px;
+  transform: translateX(-10px);
+  transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 .entries__list__card__txt,
 .plats__list__card__txt,
 .desserts__list__card__txt {
   display: grid;
   gap: 5px;
-  width: 287px;
+  /*width: 287px;*/
   /*padding-left: 10px;*/
+}
+.entries__list__card__txt .entries__list__card__title,
+.entries__list__card__txt .plats__list__card__title,
+.entries__list__card__txt .desserts__list__card__title,
+.entries__list__card__txt .entries__list__card__subtitle,
+.entries__list__card__txt .plats__list__card__subtitle,
+.entries__list__card__txt .desserts__list__card__subtitle,
+.plats__list__card__txt .entries__list__card__title,
+.plats__list__card__txt .plats__list__card__title,
+.plats__list__card__txt .desserts__list__card__title,
+.plats__list__card__txt .entries__list__card__subtitle,
+.plats__list__card__txt .plats__list__card__subtitle,
+.plats__list__card__txt .desserts__list__card__subtitle,
+.desserts__list__card__txt .entries__list__card__title,
+.desserts__list__card__txt .plats__list__card__title,
+.desserts__list__card__txt .desserts__list__card__title,
+.desserts__list__card__txt .entries__list__card__subtitle,
+.desserts__list__card__txt .plats__list__card__subtitle,
+.desserts__list__card__txt .desserts__list__card__subtitle {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.entries__list__card__txt .unset_overflow,
+.plats__list__card__txt .unset_overflow,
+.desserts__list__card__txt .unset_overflow {
+  overflow: unset;
+  text-overflow: unset;
+}
+.entries__list__card:hover .entries__list__card__title,
+.entries__list__card:hover .plats__list__card__title,
+.entries__list__card:hover .desserts__list__card__title,
+.entries__list__card:hover .entries__list__card__subtitle,
+.entries__list__card:hover .plats__list__card__subtitle,
+.entries__list__card:hover .desserts__list__card__subtitle,
+.plats__list__card:hover .entries__list__card__title,
+.plats__list__card:hover .plats__list__card__title,
+.plats__list__card:hover .desserts__list__card__title,
+.plats__list__card:hover .entries__list__card__subtitle,
+.plats__list__card:hover .plats__list__card__subtitle,
+.plats__list__card:hover .desserts__list__card__subtitle,
+.desserts__list__card:hover .entries__list__card__title,
+.desserts__list__card:hover .plats__list__card__title,
+.desserts__list__card:hover .desserts__list__card__title,
+.desserts__list__card:hover .entries__list__card__subtitle,
+.desserts__list__card:hover .plats__list__card__subtitle,
+.desserts__list__card:hover .desserts__list__card__subtitle {
+  width: 200px;
 }
 
 .entries__btn {
