@@ -84,6 +84,9 @@ header {
   border: none;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
 }
+.hero__button:hover {
+  animation: button-animation 1s ease-in-out infinite;
+}
 
 .fonctionnement {
   padding: 55px 0;
@@ -301,7 +304,7 @@ main {
   align-items: center;
   margin-top: 12px;
   /*background-color: $color-primary;*/
-  padding-left: 9px;
+  padding-left: 13px;
   /*padding: 13px 9px;*/
   height: 69px;
   /*transform-origin: left 20%;
@@ -380,7 +383,7 @@ main {
 .desserts__list__card:hover,
 .desserts__list__card:focus {
   padding: 0;
-  padding-left: 9px;
+  padding-left: 13px;
 }
 .entries__list__card:hover .entries__list__card__price,
 .entries__list__card:hover .plats__list__card__price,
@@ -480,6 +483,11 @@ main {
   overflow: unset;
   text-overflow: unset;
 }
+.entries__list__card__txt .ft-s,
+.plats__list__card__txt .ft-s,
+.desserts__list__card__txt .ft-s {
+  font-size: 17.8px;
+}
 .entries__list__card:hover .entries__list__card__title,
 .entries__list__card:hover .plats__list__card__title,
 .entries__list__card:hover .desserts__list__card__title,
@@ -501,6 +509,74 @@ main {
   width: 200px;
 }
 
+@keyframes color-animation-heart {
+  0% {
+    background: linear-gradient(180deg, #9356dc, #ff79da);
+    opacity: 0.15;
+    -webkit-background-clip: text;
+            background-clip: text;
+    color: transparent;
+  }
+  50% {
+    background: linear-gradient(180deg, #9356dc, #ff79da);
+    opacity: 0.5;
+    -webkit-background-clip: text;
+            background-clip: text;
+    color: transparent;
+    animation-timing-function: cubic-bezier(0.27, 0.68, 0.84, 0.08);
+  }
+  100% {
+    background: linear-gradient(180deg, #9356dc, #ff79da);
+    opacity: 1;
+    -webkit-background-clip: text;
+            background-clip: text;
+    color: transparent;
+  }
+}
+.empty-heart {
+  color: grey;
+}
+
+.full-heart {
+  display: none;
+}
+
+.heart-icon {
+  transition: color 0.3s;
+}
+.heart-icon:hover .empty-heart {
+  display: none;
+  height: 32px;
+}
+.heart-icon:hover .full-heart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 32px;
+  animation: color-animation-heart 0.3s forwards;
+}
+
+@keyframes button-animation {
+  0% {
+    background: linear-gradient(360deg, #9356dc, #ff79da);
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    background: linear-gradient(360deg, #9356dc, #ff79da);
+    opacity: 0.925;
+    box-shadow: 0 4px 9px 0 rgba(0, 0, 0, 0.2);
+    transform: scale(1.0125);
+    animation-timing-function: cubic-bezier(0.15, 1.14, 0.5, 0.15);
+  }
+  100% {
+    background: linear-gradient(360deg, #9356dc, #ff79da);
+    opacity: 0.8;
+    box-shadow: 0 4px 9px 0 rgba(0, 0, 0, 0.2);
+    /*animation-duration: 2s;*/
+    transform: scale(1.025);
+  }
+}
 .entries__btn {
   display: flex;
   justify-content: center;
@@ -516,6 +592,10 @@ main {
   color: #ffffff;
   border: none;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+}
+.entries__btn__btn:hover {
+  animation: button-animation 0.4s forwards;
+  cursor: pointer;
 }
 
 .menu__img {
