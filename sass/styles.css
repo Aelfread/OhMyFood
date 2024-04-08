@@ -156,7 +156,7 @@ header {
   padding: 55px 0;
 }
 .fonctionnement h2 {
-  margin: 0;
+  margin: 0 0 0 13px;
 }
 
 .fonctionnement__bar {
@@ -209,11 +209,11 @@ header {
   /*height: 1058px;*/
   padding-bottom: 40px;
 }
-.restaurants .restaurants__title {
+.restaurants__title {
   width: 100%;
   margin-top: 50px;
 }
-.restaurants .restaurants__title h2 {
+.restaurants__title h2 {
   padding: 0 20px;
   margin: 1px 0;
 }
@@ -277,6 +277,7 @@ footer h2 {
   font-style: italic;
   font-size: 18px;
   color: white;
+  margin-left: 18px;
 }
 footer ul {
   margin: 0 0 10px 0;
@@ -293,4 +294,121 @@ footer ul li .space-list {
 }
 footer ul li .space-list-2 {
   padding-right: 10px;
+}
+
+@media (min-width: 1440px) {
+  .main__container {
+    max-width: 1440px;
+  }
+  header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 146px;
+    background-color: #ffffff;
+  }
+  .header--logo {
+    height: 63px;
+  }
+  .header--logo img {
+    position: relative;
+    width: 197px;
+    height: 36px;
+    top: 28px;
+  }
+  .hero h1 {
+    max-width: 645px;
+  }
+  .hero p {
+    max-width: 645px;
+  }
+  .fonctionnement h2 {
+    margin: 0 0 0 60px;
+  }
+  .fonctionnement__bar ol {
+    display: flex;
+    justify-content: space-between;
+  }
+  .fonctionnement__bar ol li {
+    width: 30%;
+  }
+  .fonctionnement__bar ol i {
+    position: relative;
+    right: 20px;
+  }
+  .fonctionnement__bar ol p {
+    right: 104px;
+  }
+  .restaurants__title {
+    width: 78%;
+    margin-top: 50px;
+    margin-bottom: 5px;
+  }
+  .restaurants__title h2 {
+    padding: 0 20px;
+    margin: 1px 0;
+  }
+  .restaurants__choice img {
+    width: 498px;
+  }
+  .restaurants__choice__box__card {
+    margin-bottom: 40px;
+  }
+  .restaurants__choice__box--1, .restaurants__choice__box--2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 1080px;
+  }
+  .new__restaurants {
+    top: 35px;
+    left: 405px;
+  }
+  .new__restaurants-2 {
+    top: 35px;
+    left: 905px;
+  }
+  footer {
+    height: 114px;
+    align-items: flex-end;
+  }
+  footer h2 {
+    font-family: "Shrikhand", sans-serif;
+    font-style: italic;
+    font-size: 18px;
+    color: white;
+    padding: 0 50px;
+    margin-bottom: 25px;
+    margin-left: 0;
+  }
+  footer ul {
+    margin: 0;
+    /*gap: 50px;*/
+    display: flex;
+    justify-content: flex-end;
+    /*margin-bottom: 22px;*/
+  }
+  footer .footer__list {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+    /*margin: 0 0 10px 0;*/
+    padding: 0 20px;
+    list-style: none;
+    width: 100%;
+    color: white;
+    gap: 5px;
+  }
+  footer .footer__list li {
+    padding: 5px 15px;
+  }
+  footer .footer__list li .space-list {
+    padding-right: 15px;
+  }
+  footer .footer__list li .space-list-2 {
+    padding-right: 10px;
+  }
 }/*# sourceMappingURL=styles.css.map */
