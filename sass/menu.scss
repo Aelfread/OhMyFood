@@ -1,4 +1,5 @@
 @import "styles.scss";
+
 header {
   display: flex;
   flex-direction: row;
@@ -6,6 +7,7 @@ header {
   align-items: center;
   height: 63px;
   background-color: #ffffff;
+  /*animation: fadeInUp 1s cubic-bezier(0.32, 0.13, 0.29, 1) forwards;*/
   .go__back {
     width: 30px;
     margin-left: 20px;
@@ -19,7 +21,9 @@ header {
 
 main {
   background-color: #eaeaea;
+  /*animation: fadeIn 1s ease 2s forwards;*/
 }
+
 .menu__content {
   background-color: $color-grey;
 
@@ -27,15 +31,37 @@ main {
   position: relative;
   bottom: 60px;
   padding: 10px;
+  /*animation: fadeInUp 2s cubic-bezier(0.32, 0.13, 0.29, 1) 1.5s forwards;*/
   &__title {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    /*animation: fadeInUp 0.5s cubic-bezier(0.32, 0.13, 0.29, 1) forwards;*/
     h1 {
       font-family: "shrikhand", sans-serif;
       font-weight: 400;
     }
   }
+}
+
+.menu__img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 275px;
+  object-fit: cover;
+  /*animation: fadeInUp 1.5s cubic-bezier(0.32, 0.13, 0.29, 1) 0.5s forwards;*/
+}
+
+.entries {
+  animation: fadeInUp 1s cubic-bezier(0.32, 0.13, 0.29, 1) forwards;
+}
+.plats {
+  animation: fadeInUp 1.5s cubic-bezier(0.32, 0.13, 0.29, 1) 0.5s forwards;
+}
+.desserts {
+  animation: fadeInUp 2s cubic-bezier(0.32, 0.13, 0.29, 1) 1s forwards;
 }
 
 .entries,
@@ -94,7 +120,7 @@ main {
 
     .checkbox-label {
       position: absolute;
-      left: 306px;
+      left: 297px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -306,13 +332,19 @@ main {
   }
 }
 
-.menu__img {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 275px;
-  object-fit: cover;
+@keyframes fadeInUp {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+.fadeInUp-animation {
+  animation: fadeInUp 1s;
 }
 
 @media (min-width: 1440px) {
@@ -428,7 +460,7 @@ main {
     }
 
     .checkbox-label {
-      left: 798px;
+      left: 575px;
     }
   }
 
